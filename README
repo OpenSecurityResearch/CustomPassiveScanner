@@ -1,0 +1,25 @@
+CustomPassiveScanner
+By Chris Bush of Foundstone
+------------------------------------
+
+This is a Burp extension that implments a custom 
+scanner to provide two passive scan checks:
+
+    1. Reflection Checks – Using the values of the parameters 
+    in the base request that is being passively scanned, 
+    this check searches the corresponding response for those 
+    same values, providing a candidate point for further 
+    testing for reflected XSS vulnerabilities.
+
+    2. Regular Expression Match – Can be used to examine the base 
+    response of a passive scan request, looking for any string 
+    that matches a particular regular expression.  In the context 
+    of this example extension, this check is used to do a customized 
+    search of application responses using a regular expression 
+    designed to match potentially sensitive personally identifiable 
+    information (PII) unique to a specific, non-US, country.
+
+This was created as a supplemental file to a blog post on:
+    http://blog.opensecurityresearch.com
+
+
